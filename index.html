@@ -8,16 +8,31 @@
             margin: 0;
             padding: 0;
         }
-        canvas {
-            background-image: url("img/bak.jpg");
-            border: 1px solid black;
+        .canvas-wrapper{
+            position: relative;
         }
-
+        canvas{
+            position: absolute;
+            /*border: 1px solid black;*/
+        }
+        #board {
+            background-image: url("img/bak.jpg");
+        }
+        /*#highlight {*/
+        /*    background: rgba(255,0,0,1);*/
+        /*}*/
+        /*#pieces{*/
+        /*    background: rgba(0,255,0,1);*/
+        /*}*/
     </style>
 </head>
 <body>
-<canvas width="550" height="550"></canvas>
-<script src="main.js">
+<div class="canvas-wrapper">
+    <canvas id="board" width="550" height="550"></canvas>
+    <canvas id="highlight" width="550" height="550"></canvas>
+    <canvas id="pieces" width="550" height="550"></canvas>
+</div>
+<script src="game.js">
 </script>
 </body>
 </html>
